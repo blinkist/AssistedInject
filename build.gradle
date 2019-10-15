@@ -6,8 +6,8 @@ buildscript {
   ]
 
   ext.deps = [
-      'dagger': "com.google.dagger:dagger:${versions.dagger}",
-      'daggerCompiler': "com.google.dagger:dagger-compiler:${versions.dagger}",
+      'dagger': "com.github.blinkist.dagger2-shaded:dagger2-shaded-library:${versions.dagger}",
+      'daggerCompiler': "com.github.blinkist.dagger2-shaded:dagger2-shaded-compiler:${versions.dagger}",
       'autoService': 'com.google.auto.service:auto-service:1.0-rc4',
       'autoCommon': 'com.google.auto:auto-common:0.10',
       'junit': 'junit:junit:4.12',
@@ -35,6 +35,7 @@ buildscript {
     mavenCentral()
     google()
     jcenter()
+    maven { url "https://www.jitpack.io" }
   }
 }
 
@@ -43,6 +44,7 @@ subprojects {
     mavenCentral()
     google()
     jcenter()
+    maven { url "https://www.jitpack.io" }
   }
 
   // Guava is depended on transitively. Force it to the same version to prevent missing methods.
