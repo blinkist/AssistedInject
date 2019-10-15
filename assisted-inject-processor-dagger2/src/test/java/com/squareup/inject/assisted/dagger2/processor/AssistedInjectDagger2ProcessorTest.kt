@@ -62,10 +62,10 @@ class AssistedInjectDagger2ProcessorTest {
       package test;
 
       import com.squareup.inject.assisted.dagger2.AssistedModule;
-      import dagger.Module;
+      import dagger.Module2;
 
       @AssistedModule
-      @Module(includes = AssistedInject_TestModule.class)
+      @Module2(includes = AssistedInject_TestModule.class)
       abstract class TestModule {}
     """)
 
@@ -73,10 +73,10 @@ class AssistedInjectDagger2ProcessorTest {
       package test;
 
       import dagger.Binds;
-      import dagger.Module;
+      import dagger.Module2;
       import $GENERATED_TYPE;
 
-      @Module
+      @Module2
       $GENERATED_ANNOTATION
       abstract class AssistedInject_TestModule {
         private AssistedInject_TestModule() {}
@@ -146,10 +146,10 @@ class AssistedInjectDagger2ProcessorTest {
       package test;
 
       import com.squareup.inject.assisted.dagger2.AssistedModule;
-      import dagger.Module;
+      import dagger.Module2;
 
       @AssistedModule
-      @Module(includes = AssistedInject_TestModule.class)
+      @Module2(includes = AssistedInject_TestModule.class)
       abstract class TestModule {}
     """)
 
@@ -157,10 +157,10 @@ class AssistedInjectDagger2ProcessorTest {
       package test;
 
       import dagger.Binds;
-      import dagger.Module;
+      import dagger.Module2;
       import $GENERATED_TYPE;
 
-      @Module
+      @Module2
       $GENERATED_ANNOTATION
       abstract class AssistedInject_TestModule {
         private AssistedInject_TestModule() {}
@@ -207,10 +207,10 @@ class AssistedInjectDagger2ProcessorTest {
       package test;
 
       import com.squareup.inject.assisted.dagger2.AssistedModule;
-      import dagger.Module;
+      import dagger.Module2;
 
       @AssistedModule
-      @Module(includes = AssistedInject_TestModule.class)
+      @Module2(includes = AssistedInject_TestModule.class)
       public abstract class TestModule {}
     """)
 
@@ -218,10 +218,10 @@ class AssistedInjectDagger2ProcessorTest {
       package test;
 
       import dagger.Binds;
-      import dagger.Module;
+      import dagger.Module2;
       import $GENERATED_TYPE;
 
-      @Module
+      @Module2
       $GENERATED_ANNOTATION
       public abstract class AssistedInject_TestModule {
         private AssistedInject_TestModule() {}
@@ -264,10 +264,10 @@ class AssistedInjectDagger2ProcessorTest {
       package test;
 
       import com.squareup.inject.assisted.dagger2.AssistedModule;
-      import dagger.Module;
+      import dagger.Module2;
 
       @AssistedModule
-      @Module(includes = AssistedInject_TestModule.class)
+      @Module2(includes = AssistedInject_TestModule.class)
       public abstract class TestModule {}
     """)
 
@@ -275,10 +275,10 @@ class AssistedInjectDagger2ProcessorTest {
       package test;
 
       import dagger.Binds;
-      import dagger.Module;
+      import dagger.Module2;
       import $GENERATED_TYPE;
 
-      @Module
+      @Module2
       $GENERATED_ANNOTATION
       public abstract class AssistedInject_TestModule {
         private AssistedInject_TestModule() {}
@@ -319,10 +319,10 @@ class AssistedInjectDagger2ProcessorTest {
       package test;
 
       import com.squareup.inject.assisted.dagger2.AssistedModule;
-      import dagger.Module;
+      import dagger.Module2;
 
       @AssistedModule
-      @Module(includes = AssistedInject_TestModule.class)
+      @Module2(includes = AssistedInject_TestModule.class)
       public abstract class TestModule {}
     """)
 
@@ -330,10 +330,10 @@ class AssistedInjectDagger2ProcessorTest {
       package test;
 
       import dagger.Binds;
-      import dagger.Module;
+      import dagger.Module2;
       import $GENERATED_TYPE;
 
-      @Module
+      @Module2
       $GENERATED_ANNOTATION
       public abstract class AssistedInject_TestModule {
         private AssistedInject_TestModule() {}
@@ -364,7 +364,7 @@ class AssistedInjectDagger2ProcessorTest {
         .that(moduleOne)
         .processedWith(AssistedInjectDagger2Processor())
         .failsToCompile()
-        .withErrorContaining("@AssistedModule must also be annotated as a Dagger @Module")
+        .withErrorContaining("@AssistedModule must also be annotated as a Dagger @Module2")
         .`in`(moduleOne).onLine(7)
   }
 
@@ -389,11 +389,11 @@ class AssistedInjectDagger2ProcessorTest {
       package test;
 
       import com.squareup.inject.assisted.dagger2.AssistedModule;
-      import dagger.Module;
+      import dagger.Module2;
 
       class Outer {
           @AssistedModule
-          @Module(includes = AssistedInject_Outer_TestModule.class)
+          @Module2(includes = AssistedInject_Outer_TestModule.class)
           public abstract class TestModule {}
       }
     """)
@@ -401,10 +401,10 @@ class AssistedInjectDagger2ProcessorTest {
       package test;
 
       import dagger.Binds;
-      import dagger.Module;
+      import dagger.Module2;
       import $GENERATED_TYPE;
 
-      @Module
+      @Module2
       $GENERATED_ANNOTATION
       public abstract class AssistedInject_Outer_TestModule {
         private AssistedInject_Outer_TestModule() {}
@@ -426,10 +426,10 @@ class AssistedInjectDagger2ProcessorTest {
       package test;
 
       import com.squareup.inject.assisted.dagger2.AssistedModule;
-      import dagger.Module;
+      import dagger.Module2;
 
       @AssistedModule
-      @Module
+      @Module2
       abstract class OneModule {}
     """)
 
@@ -437,7 +437,7 @@ class AssistedInjectDagger2ProcessorTest {
         .that(moduleOne)
         .processedWith(AssistedInjectDagger2Processor())
         .failsToCompile()
-        .withErrorContaining("@AssistedModule's @Module must include AssistedInject_OneModule")
+        .withErrorContaining("@AssistedModule's @Module2 must include AssistedInject_OneModule")
         .`in`(moduleOne).onLine(9)
   }
 
@@ -446,13 +446,13 @@ class AssistedInjectDagger2ProcessorTest {
       package test;
 
       import com.squareup.inject.assisted.dagger2.AssistedModule;
-      import dagger.Module;
+      import dagger.Module2;
 
       @AssistedModule
-      @Module(includes = TwoModule.class)
+      @Module2(includes = TwoModule.class)
       abstract class OneModule {}
 
-      @Module
+      @Module2
       abstract class TwoModule {}
     """)
 
@@ -460,7 +460,7 @@ class AssistedInjectDagger2ProcessorTest {
         .that(moduleOne)
         .processedWith(AssistedInjectDagger2Processor())
         .failsToCompile()
-        .withErrorContaining("@AssistedModule's @Module must include AssistedInject_OneModule")
+        .withErrorContaining("@AssistedModule's @Module2 must include AssistedInject_OneModule")
         .`in`(moduleOne).onLine(9)
   }
 
@@ -472,17 +472,17 @@ class AssistedInjectDagger2ProcessorTest {
       import dagger.Module;
 
       @AssistedModule
-      @Module(includes = AssistedInject_OneModule.class)
+      @Module2(includes = AssistedInject_OneModule.class)
       abstract class OneModule {}
     """)
     val moduleTwo = JavaFileObjects.forSourceString("test.TwoModule", """
       package test;
 
       import com.squareup.inject.assisted.dagger2.AssistedModule;
-      import dagger.Module;
+      import dagger.Module2;
 
       @AssistedModule
-      @Module(includes = AssistedInject_TwoModule.class)
+      @Module2(includes = AssistedInject_TwoModule.class)
       abstract class TwoModule {}
     """)
 

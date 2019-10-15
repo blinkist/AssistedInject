@@ -11,7 +11,7 @@ import javax.lang.model.element.Modifier.ABSTRACT
 import javax.lang.model.element.Modifier.PRIVATE
 import javax.lang.model.element.Modifier.PUBLIC
 
-private val MODULE = ClassName.get("dagger", "Module")
+private val MODULE = ClassName.get("dagger", "Module2")
 private val BINDS = ClassName.get("dagger", "Binds")
 
 data class AssistedInjectionModule(

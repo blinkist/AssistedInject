@@ -94,18 +94,18 @@ class AssistedInjectDagger2Processor : AbstractProcessor() {
       }
     }
 
-    // Wait until processing is ending to validate that the @AssistedModule's @Module annotation
+    // Wait until processing is ending to validate that the @AssistedModule's @Module2 annotation
     // includes the generated type.
     if (roundEnv.processingOver()) {
       val userModuleFqcn = userModule
       if (userModuleFqcn != null) {
-        // In the processing round in which we handle the @AssistedModule the @Module annotation's
+        // In the processing round in which we handle the @AssistedModule the @Module2 annotation's
         // includes contain an <error> type because we haven't generated the assisted module yet.
         // As a result, we need to re-lookup the element so that its referenced types are available.
         val userModule = elements.getTypeElement(userModuleFqcn)
 
         // Previous validation guarantees this annotation is present.
-        val moduleAnnotation = userModule.getAnnotation("dagger.Module")!!
+        val moduleAnnotation = userModule.getAnnotation("dagger.Module2")!!
         // Dagger guarantees this property is present and is an array of types or errors.
         val includes = moduleAnnotation.getValue("includes", elements)!!
             .cast<MirrorValue.Array>()
@@ -116,7 +116,7 @@ class AssistedInjectDagger2Processor : AbstractProcessor() {
             .map { it.toTypeName() }
             .any { it == generatedModuleName }
         if (!referencesGeneratedModule) {
-          error("@AssistedModule's @Module must include ${generatedModuleName.simpleName()}",
+          error("@AssistedModule's @Module2 must include ${generatedModuleName.simpleName()}",
               userModule)
         }
       }
@@ -138,8 +138,8 @@ class AssistedInjectDagger2Processor : AbstractProcessor() {
     }
 
     val assistedModule = assistedModules.single()
-    if (!assistedModule.hasAnnotation("dagger.Module")) {
-      error("@AssistedModule must also be annotated as a Dagger @Module", assistedModule)
+    if (!assistedModule.hasAnnotation("dagger.Module2")) {
+      error("@AssistedModule must also be annotated as a Dagger @Module2", assistedModule)
       return null
     }
 
