@@ -1,87 +1,20 @@
-Assisted Injection for JSR 330
-==============================
+[<img src="https://jitpack.io/v/blinkist/AssistedInject.svg?style=flat-square">](https://jitpack.io/#blinkist/AssistedInject)
 
-Manually injected dependencies for your JSR 330 configuration. More about assisted injections in
-the [Guice wiki](https://github.com/google/guice/wiki/AssistedInject).
+# Assisted Injection for Dagger 2 Shaded
 
+This is a fork on [AssistedInject](https://github.com/square/AssistedInject) 
+that points to [Dagger 2 Shaded](https://github.com/blinkist/dagger2-shaded) 
+and understands the "new" annotations (`@Inject2`, `@Module2`, etc), so they can work together.
 
-Usage
------
-
-```java
-class MyPresenter {
-  @AssistedInject
-  MyPresenter(Long foo, @Assisted String bar) {}
-  
-  @AssistedInject.Factory
-  interface Factory {
-    MyPresenter create(String bar);
-  }
-}
-```
-
-This will generate the following:
-
-```java
-public final class MyPresenter_AssistedFactory implements MyPresenter.Factory {
-  private final Provider<Long> foo;
-
-  @Inject public MyPresenter_AssistedFactory(Provider<Long> foo) {
-    this.foo = foo;
-  }
-
-  @Override public MyPresenter create(String bar) {
-    return new MyPresenter(foo.get(), bar);
-  }
-}
-```
-
-
-Usage with Dagger 2
--------------------
-
-In order to allow Dagger to use the generated factory, define an assisted dagger module anywhere in
-the same gradle module:
-
-```java
-@AssistedModule
-@Module(includes = AssistedInject_PresenterModule.class)
-abstract class PresenterModule {}
-```
-
-The library will generate the `AssistedInject_PresenterModule` for us. 
-
-
-Download
---------
+If you're using Dagger 2 Shaded and want to work with AssistedInject, just add this to your build:
 
 ```groovy
-compileOnly 'com.squareup.inject:assisted-inject-annotations:0.5.0'
-annotationProcessor 'com.squareup.inject:assisted-inject-processor:0.5.0'
+repositories {
+  maven { url "https://jitpack.io" }
+}
+
+dependencies {
+  implementation 'com.github.blinkist.AssistedInject:assisted-inject-annotations-dagger2:0.5.0-dagger2-shaded-friendly'
+  kapt 'com.github.blinkist.AssistedInject:assisted-inject-processor-dagger2:0.5.0-dagger2-shaded-friendly'
+}
 ```
-
-With Dagger 2:
-
-```groovy
-compileOnly 'com.squareup.inject:assisted-inject-annotations-dagger2:0.5.0'
-annotationProcessor 'com.squareup.inject:assisted-inject-processor-dagger2:0.5.0'
-```
-
-
-License
-=======
-
-    Copyright 2017 Square, Inc.
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-
