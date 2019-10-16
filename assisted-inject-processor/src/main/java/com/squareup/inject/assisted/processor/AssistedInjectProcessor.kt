@@ -100,9 +100,9 @@ class AssistedInjectProcessor : AbstractProcessor() {
     // Error any constructor usage of @Assisted which also uses @Inject.
     assistedMethods
         .filter { it.simpleName.contentEquals("<init>") }
-        .filter { it.hasAnnotation("javax.inject.Inject") }
+        .filter { it.hasAnnotation("javax.inject.Inject2") }
         .forEach {
-          error("@Assisted parameter does not work with @Inject! Use @AssistedInject or " +
+          error("@Assisted parameter does not work with @Inject2! Use @AssistedInject or " +
               "@InflationInject", it)
         }
 
@@ -222,7 +222,7 @@ class AssistedInjectProcessor : AbstractProcessor() {
     val requests = targetConstructor.parameters.map { it.asDependencyRequest() }
     val (assistedRequests, providedRequests) = requests.partition { it.isAssisted }
     if (assistedRequests.isEmpty()) {
-      warn("Assisted injection without at least one @Assisted parameter can use @Inject",
+      warn("Assisted injection without at least one @Assisted parameter can use @Inject2",
           targetConstructor)
     }
     if (providedRequests.isEmpty()) {

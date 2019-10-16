@@ -16,8 +16,8 @@ import javax.lang.model.element.Modifier.FINAL
 import javax.lang.model.element.Modifier.PRIVATE
 import javax.lang.model.element.Modifier.PUBLIC
 
-private val JAVAX_INJECT = ClassName.get("javax.inject", "Inject")
-private val JAVAX_PROVIDER = ClassName.get("javax.inject", "Provider")
+private val JAVAX_INJECT = ClassName.get("javax.inject", "Inject2")
+private val JAVAX_PROVIDER = ClassName.get("javax.inject", "Provider2")
 
 /** The structure of an assisted injection factory. */
 data class AssistedInjection(

@@ -62,14 +62,14 @@ class AssistedInjectProcessorTest {
       import java.lang.Override;
       import java.lang.String;
       import $GENERATED_TYPE;
-      import javax.inject.Inject;
-      import javax.inject.Provider;
+      import javax.inject.Inject2;
+      import javax.inject.Provider2;
 
       $GENERATED_ANNOTATION
       public final class Test_AssistedFactory implements Test.Factory {
-        private final Provider<Long> foo;
+        private final Provider2<Long> foo;
 
-        @Inject public Test_AssistedFactory(Provider<Long> foo) {
+        @Inject2 public Test_AssistedFactory(Provider2<Long> foo) {
           this.foo = foo;
         }
 
@@ -93,11 +93,11 @@ class AssistedInjectProcessorTest {
 
       import com.squareup.inject.assisted.Assisted;
       import com.squareup.inject.assisted.AssistedInject;
-      import javax.inject.Provider;
+      import javax.inject.Provider2;
 
       class Test {
         @AssistedInject
-        Test(Provider<Long> foo, @Assisted String bar) {}
+        Test(Provider2<Long> foo, @Assisted String bar) {}
 
         @AssistedInject.Factory
         interface Factory {
@@ -113,14 +113,14 @@ class AssistedInjectProcessorTest {
       import java.lang.Override;
       import java.lang.String;
       import $GENERATED_TYPE;
-      import javax.inject.Inject;
-      import javax.inject.Provider;
+      import javax.inject.Inject2;
+      import javax.inject.Provider2;
 
       $GENERATED_ANNOTATION
       public final class Test_AssistedFactory implements Test.Factory {
-        private final Provider<Long> foo;
+        private final Provider2<Long> foo;
 
-        @Inject public Test_AssistedFactory(Provider<Long> foo) {
+        @Inject2 public Test_AssistedFactory(Provider2<Long> foo) {
           this.foo = foo;
         }
 
@@ -163,14 +163,14 @@ class AssistedInjectProcessorTest {
       import java.lang.Override;
       import java.lang.String;
       import $GENERATED_TYPE;
-      import javax.inject.Inject;
-      import javax.inject.Provider;
+      import javax.inject.Inject2;
+      import javax.inject.Provider2;
 
       $GENERATED_ANNOTATION
       public final class Test_AssistedFactory implements Test.Factory {
-        private final Provider<Long> foo;
+        private final Provider2<Long> foo;
 
-        @Inject public Test_AssistedFactory(Provider<Long> foo) {
+        @Inject2 public Test_AssistedFactory(Provider2<Long> foo) {
           this.foo = foo;
         }
 
@@ -212,14 +212,14 @@ class AssistedInjectProcessorTest {
       import java.lang.Override;
       import java.lang.String;
       import $GENERATED_TYPE;
-      import javax.inject.Inject;
-      import javax.inject.Provider;
+      import javax.inject.Inject2;
+      import javax.inject.Provider2;
 
       $GENERATED_ANNOTATION
       public final class Test_AssistedFactory implements Test.Factory {
-        private final Provider<String> foo;
+        private final Provider2<String> foo;
 
-        @Inject public Test_AssistedFactory(Provider<String> foo) {
+        @Inject2 public Test_AssistedFactory(Provider2<String> foo) {
           this.foo = foo;
         }
 
@@ -261,15 +261,15 @@ class AssistedInjectProcessorTest {
       import java.lang.Override;
       import java.lang.String;
       import $GENERATED_TYPE;
-      import javax.inject.Inject;
-      import javax.inject.Provider;
+      import javax.inject.Inject2;
+      import javax.inject.Provider2;
 
       $GENERATED_ANNOTATION
       public final class Test_AssistedFactory implements Test.Factory {
-        private final Provider<String> foo;
-        private final Provider<String> baz;
+        private final Provider2<String> foo;
+        private final Provider2<String> baz;
 
-        @Inject public Test_AssistedFactory(Provider<String> foo, Provider<String> baz) {
+        @Inject2 public Test_AssistedFactory(Provider2<String> foo, Provider2<String> baz) {
           this.foo = foo;
           this.baz = baz;
         }
@@ -312,14 +312,14 @@ class AssistedInjectProcessorTest {
       import java.lang.Override;
       import java.lang.String;
       import $GENERATED_TYPE;
-      import javax.inject.Inject;
-      import javax.inject.Provider;
+      import javax.inject.Inject2;
+      import javax.inject.Provider2;
 
       $GENERATED_ANNOTATION
       public final class Test_AssistedFactory implements Test.Factory {
-        private final Provider<String> bar;
+        private final Provider2<String> bar;
 
-        @Inject public Test_AssistedFactory(Provider<String> bar) {
+        @Inject2 public Test_AssistedFactory(Provider2<String> bar) {
           this.bar = bar;
         }
 
@@ -361,14 +361,14 @@ class AssistedInjectProcessorTest {
       import java.lang.Override;
       import java.lang.String;
       import $GENERATED_TYPE;
-      import javax.inject.Inject;
-      import javax.inject.Provider;
+      import javax.inject.Inject2;
+      import javax.inject.Provider2;
 
       $GENERATED_ANNOTATION
       public final class Test_AssistedFactory implements Test.Factory {
-        private final Provider<String> bar;
+        private final Provider2<String> bar;
 
-        @Inject public Test_AssistedFactory(Provider<String> bar) {
+        @Inject2 public Test_AssistedFactory(Provider2<String> bar) {
           this.bar = bar;
         }
 
@@ -457,7 +457,7 @@ class AssistedInjectProcessorTest {
 
       import com.squareup.inject.assisted.Assisted;
       import com.squareup.inject.assisted.AssistedInject;
-      import javax.inject.Qualifier;
+      import javax.inject.Qualifier2;
 
       class Test {
         @AssistedInject
@@ -469,7 +469,7 @@ class AssistedInjectProcessorTest {
         }
       }
 
-      @Qualifier
+      @Qualifier2
       @interface Id {}
     """)
 
@@ -479,14 +479,14 @@ class AssistedInjectProcessorTest {
       import java.lang.Override;
       import java.lang.String;
       import $GENERATED_TYPE;
-      import javax.inject.Inject;
-      import javax.inject.Provider;
+      import javax.inject.Inject2;
+      import javax.inject.Provider2;
 
       $GENERATED_ANNOTATION
       public final class Test_AssistedFactory implements Test.Factory {
-        private final Provider<String> foo;
+        private final Provider2<String> foo;
 
-        @Inject public Test_AssistedFactory(@Id Provider<String> foo) {
+        @Inject2 public Test_AssistedFactory(@Id Provider2<String> foo) {
           this.foo = foo;
         }
 
@@ -510,7 +510,7 @@ class AssistedInjectProcessorTest {
 
       import com.squareup.inject.assisted.Assisted;
       import com.squareup.inject.assisted.AssistedInject;
-      import javax.inject.Qualifier;
+      import javax.inject.Qualifier2;
 
       class Test {
         @AssistedInject
@@ -522,7 +522,7 @@ class AssistedInjectProcessorTest {
         }
       }
 
-      @Qualifier
+      @Qualifier2
       @interface Id {}
     """)
 
@@ -532,14 +532,14 @@ class AssistedInjectProcessorTest {
       import java.lang.Override;
       import java.lang.String;
       import $GENERATED_TYPE;
-      import javax.inject.Inject;
-      import javax.inject.Provider;
+      import javax.inject.Inject2;
+      import javax.inject.Provider2;
 
       $GENERATED_ANNOTATION
       public final class Test_AssistedFactory implements Test.Factory {
-        private final Provider<String> foo;
+        private final Provider2<String> foo;
 
-        @Inject public Test_AssistedFactory(Provider<String> foo) {
+        @Inject2 public Test_AssistedFactory(Provider2<String> foo) {
           this.foo = foo;
         }
 
@@ -563,11 +563,11 @@ class AssistedInjectProcessorTest {
 
       import com.squareup.inject.assisted.Assisted;
       import com.squareup.inject.assisted.AssistedInject;
-      import javax.inject.Named;
+      import javax.inject.Named2;
 
       class Test {
         @AssistedInject
-        Test(@Named("foo") String foo, @Assisted String bar) {}
+        Test(@Named2("foo") String foo, @Assisted String bar) {}
 
         @AssistedInject.Factory
         interface Factory {
@@ -582,15 +582,15 @@ class AssistedInjectProcessorTest {
       import java.lang.Override;
       import java.lang.String;
       import $GENERATED_TYPE;
-      import javax.inject.Inject;
-      import javax.inject.Named;
-      import javax.inject.Provider;
+      import javax.inject.Inject2;
+      import javax.inject.Named2;
+      import javax.inject.Provider2;
 
       $GENERATED_ANNOTATION
       public final class Test_AssistedFactory implements Test.Factory {
-        private final Provider<String> foo;
+        private final Provider2<String> foo;
 
-        @Inject public Test_AssistedFactory(@Named("foo") Provider<String> foo) {
+        @Inject2 public Test_AssistedFactory(@Named2("foo") Provider2<String> foo) {
           this.foo = foo;
         }
 
@@ -614,7 +614,7 @@ class AssistedInjectProcessorTest {
 
       import com.squareup.inject.assisted.Assisted;
       import com.squareup.inject.assisted.AssistedInject;
-      import javax.inject.Qualifier;
+      import javax.inject.Qualifier2;
 
       class Test {
         @AssistedInject
@@ -626,7 +626,7 @@ class AssistedInjectProcessorTest {
         }
       }
 
-      @Qualifier
+      @Qualifier2
       @interface Id {}
     """)
 
@@ -636,14 +636,14 @@ class AssistedInjectProcessorTest {
       import java.lang.Override;
       import java.lang.String;
       import $GENERATED_TYPE;
-      import javax.inject.Inject;
-      import javax.inject.Provider;
+      import javax.inject.Inject2;
+      import javax.inject.Provider2;
 
       $GENERATED_ANNOTATION
       public final class Test_AssistedFactory implements Test.Factory {
-        private final Provider<String> foo;
+        private final Provider2<String> foo;
 
-        @Inject public Test_AssistedFactory(@Id Provider<String> foo) {
+        @Inject2 public Test_AssistedFactory(@Id Provider2<String> foo) {
           this.foo = foo;
         }
 
@@ -685,14 +685,14 @@ class AssistedInjectProcessorTest {
       import java.lang.Override;
       import java.lang.String;
       import $GENERATED_TYPE;
-      import javax.inject.Inject;
-      import javax.inject.Provider;
+      import javax.inject.Inject2;
+      import javax.inject.Provider2;
 
       $GENERATED_ANNOTATION
       public final class Test_AssistedFactory implements Test.Factory {
-        private final Provider<String> foo;
+        private final Provider2<String> foo;
 
-        @Inject public Test_AssistedFactory(Provider<String> foo) {
+        @Inject2 public Test_AssistedFactory(Provider2<String> foo) {
           this.foo = foo;
         }
 
@@ -709,7 +709,7 @@ class AssistedInjectProcessorTest {
         .and()
         .generatesSources(expected)
         .withWarningContaining(
-            "Assisted injection without at least one @Assisted parameter can use @Inject")
+            "Assisted injection without at least one @Assisted parameter can use @Inject2")
         .`in`(input).onLine(9)
   }
 
@@ -737,11 +737,11 @@ class AssistedInjectProcessorTest {
       import java.lang.Override;
       import java.lang.String;
       import $GENERATED_TYPE;
-      import javax.inject.Inject;
+      import javax.inject.Inject2;
 
       $GENERATED_ANNOTATION
       public final class Test_AssistedFactory implements Test.Factory {
-        @Inject public Test_AssistedFactory() {
+        @Inject2 public Test_AssistedFactory() {
         }
 
         @Override public Test create(String foo) {
@@ -914,7 +914,7 @@ class AssistedInjectProcessorTest {
 
       import com.squareup.inject.assisted.Assisted;
       import com.squareup.inject.assisted.AssistedInject;
-      import javax.inject.Qualifier;
+      import javax.inject.Qualifier2;
 
       class Test {
         @AssistedInject
@@ -926,7 +926,7 @@ class AssistedInjectProcessorTest {
         }
       }
 
-      @Qualifier
+      @Qualifier2
       @interface Id {}
     """)
 
@@ -950,7 +950,7 @@ class AssistedInjectProcessorTest {
 
       import com.squareup.inject.assisted.Assisted;
       import com.squareup.inject.assisted.AssistedInject;
-      import javax.inject.Qualifier;
+      import javax.inject.Qualifier2;
 
       class Test {
         @AssistedInject
@@ -962,7 +962,7 @@ class AssistedInjectProcessorTest {
         }
       }
 
-      @Qualifier
+      @Qualifier2
       @interface Id {}
     """)
 
@@ -1142,14 +1142,14 @@ class AssistedInjectProcessorTest {
       import java.lang.Override;
       import java.lang.String;
       import $GENERATED_TYPE;
-      import javax.inject.Inject;
-      import javax.inject.Provider;
+      import javax.inject.Inject2;
+      import javax.inject.Provider2;
 
       $GENERATED_ANNOTATION
       public final class Test_AssistedFactory implements Test.Factory {
-        private final Provider<Long> foo;
+        private final Provider2<Long> foo;
 
-        @Inject public Test_AssistedFactory(Provider<Long> foo) {
+        @Inject2 public Test_AssistedFactory(Provider2<Long> foo) {
           this.foo = foo;
         }
 
@@ -1192,14 +1192,14 @@ class AssistedInjectProcessorTest {
       import java.lang.Override;
       import java.lang.String;
       import $GENERATED_TYPE;
-      import javax.inject.Inject;
-      import javax.inject.Provider;
+      import javax.inject.Inject2;
+      import javax.inject.Provider2;
 
       $GENERATED_ANNOTATION
       public final class Test_AssistedFactory implements Test.Factory {
-        private final Provider<Long> foo;
+        private final Provider2<Long> foo;
 
-        @Inject public Test_AssistedFactory(Provider<Long> foo) {
+        @Inject2 public Test_AssistedFactory(Provider2<Long> foo) {
           this.foo = foo;
         }
 
@@ -1399,15 +1399,15 @@ class AssistedInjectProcessorTest {
       import java.lang.Long;
       import java.lang.Override;
       import $GENERATED_TYPE;
-      import javax.inject.Inject;
-      import javax.inject.Provider;
+      import javax.inject.Inject2;
+      import javax.inject.Provider2;
 
       $GENERATED_ANNOTATION
       public final class Test_AssistedFactory implements Test.Factory {
-        private final Provider<Long> foo;
+        private final Provider2<Long> foo;
 
-        @Inject
-        public Test_AssistedFactory(Provider<Long> foo) {
+        @Inject2
+        public Test_AssistedFactory(Provider2<Long> foo) {
           this.foo = foo;
         }
 
@@ -1455,14 +1455,14 @@ class AssistedInjectProcessorTest {
       import java.lang.Override;
       import java.lang.String;
       import $GENERATED_TYPE;
-      import javax.inject.Inject;
-      import javax.inject.Provider;
+      import javax.inject.Inject2;
+      import javax.inject.Provider2;
 
       $GENERATED_ANNOTATION
       public final class Outer${'$'}Test_AssistedFactory implements Outer.Test.Factory {
-        private final Provider<Long> foo;
+        private final Provider2<Long> foo;
 
-        @Inject public Outer${'$'}Test_AssistedFactory(Provider<Long> foo) {
+        @Inject2 public Outer${'$'}Test_AssistedFactory(Provider2<Long> foo) {
           this.foo = foo;
         }
 
@@ -1510,14 +1510,14 @@ class AssistedInjectProcessorTest {
       import java.lang.Override;
       import java.lang.String;
       import $GENERATED_TYPE;
-      import javax.inject.Inject;
-      import javax.inject.Provider;
+      import javax.inject.Inject2;
+      import javax.inject.Provider2;
 
       $GENERATED_ANNOTATION
       public final class Test_AssistedFactory implements Test.Factory {
-        private final Provider<Long> foo;
+        private final Provider2<Long> foo;
 
-        @Inject public Test_AssistedFactory(Provider<Long> foo) {
+        @Inject2 public Test_AssistedFactory(Provider2<Long> foo) {
           this.foo = foo;
         }
 
@@ -1565,14 +1565,14 @@ class AssistedInjectProcessorTest {
       import java.lang.Override;
       import java.lang.String;
       import $GENERATED_TYPE;
-      import javax.inject.Inject;
-      import javax.inject.Provider;
+      import javax.inject.Inject2;
+      import javax.inject.Provider2;
 
       $GENERATED_ANNOTATION
       public final class Test_AssistedFactory implements Test.Factory {
-        private final Provider<Long> foo;
+        private final Provider2<Long> foo;
 
-        @Inject public Test_AssistedFactory(Provider<Long> foo) {
+        @Inject2 public Test_AssistedFactory(Provider2<Long> foo) {
           this.foo = foo;
         }
 
@@ -1742,10 +1742,10 @@ class AssistedInjectProcessorTest {
       package test;
 
       import com.squareup.inject.assisted.Assisted;
-      import javax.inject.Inject;
+      import javax.inject.Inject2;
 
       class Test {
-        @Inject
+        @Inject2
         Test(Long foo, @Assisted String bar) {}
       }
     """)
@@ -1755,7 +1755,7 @@ class AssistedInjectProcessorTest {
         .processedWith(AssistedInjectProcessor())
         .failsToCompile()
         .withErrorContaining(
-            "@Assisted parameter does not work with @Inject! Use @AssistedInject or @InflationInject")
+            "@Assisted parameter does not work with @Inject2! Use @AssistedInject or @InflationInject")
         .`in`(input).onLine(9)
   }
 }

@@ -36,5 +36,5 @@ data class Key(
 /** Create a [Key] from this type and any qualifier annotation. */
 fun VariableElement.asKey(mirror: TypeMirror = asType()) = Key(mirror.toTypeName(),
     annotationMirrors.find {
-      it.annotationType.asElement().hasAnnotation("javax.inject.Qualifier")
+      it.annotationType.asElement().hasAnnotation("javax.inject.Qualifier2")
     }?.let { AnnotationSpec.get(it) })
