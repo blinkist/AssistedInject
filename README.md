@@ -1,4 +1,4 @@
-[<img src="https://jitpack.io/v/blinkist/AssistedInject.svg?style=flat-square">](https://jitpack.io/#blinkist/AssistedInject)
+[![Release](https://jitpack.io/v/blinkist/AssistedInject.svg?style=flat-square)](https://jitpack.io/#blinkist/AssistedInject)
 
 # Assisted Injection for Dagger 2 Shaded
 
@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-  implementation 'com.github.blinkist.AssistedInject:assisted-inject-annotations-dagger2:0.5.0-dagger2-shaded-friendly'
-  kapt 'com.github.blinkist.AssistedInject:assisted-inject-processor-dagger2:0.5.0-dagger2-shaded-friendly'
+  implementation 'com.github.blinkist.AssistedInject:assisted-inject-annotations-dagger2:0.5.1-dagger2-shaded-friendly'
+  kapt 'com.github.blinkist.AssistedInject:assisted-inject-processor-dagger2:0.5.1-dagger2-shaded-friendly'
 }
 ```
