@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-  implementation 'com.github.blinkist.AssistedInject:assisted-inject-annotations-dagger2:0.5.1-dagger2-shaded-friendly'
-  kapt 'com.github.blinkist.AssistedInject:assisted-inject-processor-dagger2:0.5.1-dagger2-shaded-friendly'
+  implementation 'com.github.blinkist.AssistedInject:assisted-inject-annotations-dagger2:0.5.2-dagger2-shaded-friendly'
+  kapt 'com.github.blinkist.AssistedInject:assisted-inject-processor-dagger2:0.5.2-dagger2-shaded-friendly'
 }
 ```
